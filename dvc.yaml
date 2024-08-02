@@ -4,3 +4,10 @@ stages:
     deps:
     - data/raw/
     - src/features/build_features.py
+  train-model:
+    cmd: python src/models/train_model.py data/processed/
+    deps:
+    - data/processed/
+    - src/models/train_model.py
+    outs:
+    - models/

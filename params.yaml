@@ -1,0 +1,6 @@
+train_model:
+  n_estimators: 60
+  max_depth: 5
+  max_samples: 5
+  max_features: 6
+  seed: 23
