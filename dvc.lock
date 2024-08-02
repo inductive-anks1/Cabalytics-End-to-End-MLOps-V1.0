@@ -24,9 +24,16 @@ stages:
       hash: md5
       md5: 41f4d7dc28b660e07a4b8981c08026ec
       size: 3369
+    params:
+      params.yaml:
+        train_model.max_depth: 5
+        train_model.max_features: 6
+        train_model.max_samples: 5
+        train_model.n_estimators: 70
+        train_model.seed: 23
     outs:
     - path: models/
       hash: md5
-      md5: a88df8ef3e13f800ad164a28ed35e5c7.dir
-      size: 56762
+      md5: 8166eb3bf703139456415c9c4959a681.dir
+      size: 65518
       nfiles: 1
