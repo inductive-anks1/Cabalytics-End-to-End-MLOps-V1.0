@@ -29,11 +29,11 @@ stages:
         train_model.max_depth: 5
         train_model.max_features: 6
         train_model.max_samples: 5
-        train_model.n_estimators: 70
+        train_model.n_estimators: 100
         train_model.seed: 23
     outs:
     - path: models/
       hash: md5
-      md5: 8166eb3bf703139456415c9c4959a681.dir
-      size: 65518
+      md5: d987b4a13fc02e4779ed95ad00a31237.dir
+      size: 92227
       nfiles: 1
