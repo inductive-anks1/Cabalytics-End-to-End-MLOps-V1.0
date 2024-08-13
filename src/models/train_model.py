@@ -28,6 +28,8 @@ from sklearn.ensemble import RandomForestRegressor,GradientBoostingRegressor,Ada
 from sklearn.svm import SVR
 from xgboost import XGBRegressor
 
+from dvclive import Live
+
 def train_model(X_train, y_train, n_estimators, max_depth, max_samples, max_features, seed):
     # Define the preprocessing and model steps
     step1 = ColumnTransformer(transformers=[
@@ -94,6 +96,10 @@ def main():
                                 params['max_samples'], params['max_features'], params['seed'])
     
     save_model(trained_model, output_path)
+
+    with Live(save_dvc_exp=True) as live:
+        for param, value in params.items():
+            live.log_param(param, value)
 
 if __name__ == "__main__":
     main()

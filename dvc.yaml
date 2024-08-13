@@ -17,3 +17,5 @@ stages:
     - train_model.seed
     outs:
     - models/
+params:
+- dvclive/params.yaml
